@@ -1,0 +1,111 @@
+@import "/src/styles.scss";
+
+.header {
+  width: calc(100% - 325px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 94px;
+  background-color: $light;
+  transition: all 0.5s;
+  padding: 20px;
+  z-index: 4;
+  margin: 13px;
+  border-radius: 15px;
+  border: 1px solid rgba($color: $primary, $alpha: 0.2);
+  
+  .pageTitle {
+    @include itemPosition(center, flex-start);
+    gap: 10px;
+    i {
+      cursor: pointer;
+    }
+  }
+  .userProfile {
+    @include itemPosition(center, flex-end);
+    gap: 20px;
+    .notification {
+      position: relative;
+      i {
+        font-size: 30px;
+        color: $primary;
+        cursor: pointer;
+      }
+      span {
+        @include roundShape(10px, 10px, $red);
+        color: $light;
+        font-size: 10px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+      .card {
+        position: absolute;
+        top: 50px;
+        right: -100px;
+        width: 250px;
+        .card-body {
+          max-height: 300px;
+          overflow-y: auto;
+          ul {
+            list-style: none;
+            padding-left: 0;
+            li {
+              margin: 10px 0;
+              padding: 0 15px;
+              position: relative;
+              &::after {
+                content: "";
+                width: 3px;
+                height: 15px;
+                position: absolute;
+                left: 0px;
+                background-color: $primary;
+                top: 4px;
+                border-radius: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .profileImage {
+      @include roundShape(50px, 50px, transparent);
+      img {
+        @include roundShape(50px, 50px, transparent);
+      }
+    }
+  }
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  padding: 0 !important;
+}
+
+::ng-deep
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link
+  .p-submenu-icon {
+  margin-left: 0px;
+}
+
+::ng-deep .p-menubar .p-submenu-list {
+  right: 0;
+  top: 35px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .header {
+    width: calc(100% - 250px);
+    height: 80px;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    width: calc(100% - 0px);
+  }
+}

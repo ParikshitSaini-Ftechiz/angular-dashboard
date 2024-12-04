@@ -1,0 +1,208 @@
+<div class="sidebar" [class.toggleSidebar]="clicked">
+  <div class="logo">
+    <img src="../../../assets/Images/logo_light.svg" alt="" />
+  </div>
+  <div class="sideMenu">
+
+    <button class="btn btn-primary">Click</button>
+    <ul>
+      <li (click)="clicked = false" routerLink="/dashboard/" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/dashboard.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Dashboard</div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a (click)="opendropdown('doctor')">
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/profile.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Doctors</div>
+          </div>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+        <div class="dropdownBox" *ngIf="dropdown === 'doctor'">
+          <p class="mb-0" routerLink="/dashboard/doctor-list" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Doctor List
+          </p>
+          <p class="mb-0" routerLink="/dashboard/add-doctor" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Add Doctor
+          </p>
+          <p class="mb-0">
+            <i class="fa-solid fa-angle-right"></i> Edit Doctor
+          </p>
+          <p class="mb-0" routerLink="/dashboard/doctor-profile" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Doctor Profile
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <a (click)="opendropdown('staff')">
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/profile.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Staff</div>
+          </div>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+        <div class="dropdownBox" *ngIf="dropdown === 'staff'">
+          <p class="mb-0" routerLink="/dashboard/Staff-list" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Staff List
+          </p>
+          <p class="mb-0" routerLink="/dashboard/add-staff" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Add Staff
+          </p>
+          <p class="mb-0">
+            <i class="fa-solid fa-angle-right"></i> Edit Doctor
+          </p>
+          <p class="mb-0" routerLink="/dashboard/staff-profile" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Staff Profile
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <a (click)="opendropdown('Appointment')">
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/profile.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Appointment</div>
+          </div>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+        <div class="dropdownBox" *ngIf="dropdown === 'Appointment'">
+          <p class="mb-0" routerLink="/dashboard/Appointment-list" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Appointment List
+          </p>
+          <p class="mb-0" routerLink="/dashboard/Book-Appointment" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Book Appointment
+          </p>
+          <p class="mb-0">
+            <i class="fa-solid fa-angle-right"></i> Edit Appointment
+          </p>
+        </div>
+      </li>
+      <li (click)="clicked = false" routerLinkActive="active" routerLink="/dashboard/profile">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/profile.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Profile</div>
+          </div>
+        </a>
+      </li>
+      <li (click)="clicked = false" routerLinkActive="active" routerLink="/dashboard/calender">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/profile.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Calender</div>
+          </div>
+        </a>
+      </li>
+      <li (click)="clicked = false">
+        <a (click)="opendropdown('Report')">
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/profile.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Report</div>
+          </div>
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+        <div class="dropdownBox" *ngIf="dropdown === 'Report'">
+          <p class="mb-0" routerLink="/dashboard/expense-report" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Expense Report
+          </p>
+          <p class="mb-0" routerLink="/dashboard/add-doctor" routerLinkActive="active">
+            <i class="fa-solid fa-angle-right"></i> Invoice Report
+          </p>
+        </div>
+      </li>
+      <li (click)="clicked = false" routerLink="/dashboard/listing" routerLinkActive="active">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/treatmentNote.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Listing</div>
+          </div>
+        </a>
+      </li>
+      <li (click)="clicked = false" routerLink="/dashboard/chat" routerLinkActive="active">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/treatmentNote.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Chat</div>
+          </div>
+        </a>
+      </li>
+      <li (click)="clicked = false" routerLink="/dashboard/graphs" routerLinkActive="active">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/treatmentNote.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Graphs</div>
+          </div>
+        </a>
+      </li>
+      <li (click)="clicked = false" routerLink="/dashboard/tabs" routerLinkActive="active">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/treatmentNote.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Tabs</div>
+          </div>
+        </a>
+      </li>
+      <li (click)="clicked = false" routerLink="/dashboard/accordion" routerLinkActive="active">
+        <a>
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/treatmentNote.svg" alt="" />
+            </div>
+            <div class="text cursor-pointer fxsm">Accordion</div>
+          </div>
+        </a>
+      </li>
+
+      <li (click)="clicked = false" routerLink="/dashboard/settings" routerLinkActive="active">
+        <a href="">
+          <div class="flexStart">
+            <div class="icon">
+              <img src="../../../assets/Images/icon/settings.svg" alt="" />
+            </div>
+            <div class="text fxsm">Settings</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a routerLink="/">
+          <div class="icon">
+            <img src="../../../assets/Images/icon/logout.svg" alt="" />
+          </div>
+          <div class="text fxsm">Logout</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="darkSpace" (click)="clicked = !clicked" [class.toggleSidebar]="clicked"></div>

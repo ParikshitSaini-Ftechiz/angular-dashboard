@@ -1,0 +1,271 @@
+<div class="row">
+  <div class="col-md-8">
+    <h4>Dashboard Overview</h4>
+
+    <div class="row overview">
+      <div class="col-sm-4">
+        <div class="card p-2 bg-red shadow">
+          <div class="flexStart">
+            <div class="icon cbg-red">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h5>Customers</h5>
+          </div>
+          <h1>25</h1>
+        </div>
+      </div>
+      <div class="col-sm-4 mt-3 mt-sm-0">
+        <div class="card p-2 bg-purple shadow">
+          <div class="flexStart">
+            <div class="icon cbg-purple">
+              <i class="fa-solid fa-money-check-dollar"></i>
+            </div>
+            <h5>Income</h5>
+          </div>
+          <h1>$256255</h1>
+        </div>
+      </div>
+      <div class="col-sm-4 mt-3 mt-sm-0">
+        <div class="card p-2 bg-green shadow">
+          <div class="flexStart">
+            <div class="icon cbg-green">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h5>Product Sold</h5>
+          </div>
+          <h1>25614</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">Line Chart</div>
+          <div class="card-body">
+            <p-chart
+              type="line"
+              [data]="basicData"
+              [options]="basicOptions"
+            ></p-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">Data Table</div>
+          <div class="card-body px-0 pt-0">
+            <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Category</th>
+                  <th>Quantity</th>
+                  <th>Status</th>
+                  <th>Reviews</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product let-columns="columns">
+                <tr>
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.price | currency : "USD" }}</td>
+                  <td>{{ product.category }}</td>
+                  <td>{{ product.quantity }}</td>
+                  <td>Succes</td>
+                  <td>
+                    <p-rating
+                      [ngModel]="product.rating"
+                      [readonly]="true"
+                      [cancel]="false"
+                    ></p-rating>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h4>Summery</h4>
+    <div class="card">
+      <div class="card-header">Bar Chart</div>
+      <div class="card-body">
+        <p-chart
+          type="bar"
+          [data]="basicData"
+          [options]="basicOptions"
+        ></p-chart>
+      </div>
+    </div>
+    <h4 class="mt-4">Activity</h4>
+    <div class="card performingproducts">
+      <div class="card-header">Top performing products</div>
+      <div class="card-body">
+        <ul>
+          <li>
+            <p class="mb-0">Product Name</p>
+            <p-progressBar [value]="50"></p-progressBar>
+          </li>
+          <li>
+            <p class="mb-0">Product Name</p>
+            <p-progressBar [value]="25"></p-progressBar>
+          </li>
+          <li>
+            <p class="mb-0">Product Name</p>
+            <p-progressBar [value]="36"></p-progressBar>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card userList mt-4">
+      <div class="card-header">Active users</div>
+      <div class="card-body">
+        <ul>
+          <li>
+            <div class="spcBetween">
+              <div class="profile">
+                <img src="../../../assets/Images/profile.png" alt="" />
+                <p class="mb-0">Robert</p>
+              </div>
+              <a href="">See profile</a>
+            </div>
+          </li>
+          <li>
+            <div class="spcBetween">
+              <div class="profile">
+                <img src="../../../assets/Images/profile.png" alt="" />
+                <p class="mb-0">Robert</p>
+              </div>
+              <a href="">See profile</a>
+            </div>
+          </li>
+          <li>
+            <div class="spcBetween">
+              <div class="profile">
+                <img src="../../../assets/Images/profile.png" alt="" />
+                <p class="mb-0">Robert</p>
+              </div>
+              <a href="">See profile</a>
+            </div>
+          </li>
+          <li>
+            <div class="spcBetween">
+              <div class="profile">
+                <img src="../../../assets/Images/profile.png" alt="" />
+                <p class="mb-0">Robert</p>
+              </div>
+              <a href="">See profile</a>
+            </div>
+          </li>
+          <li>
+            <div class="spcBetween">
+              <div class="profile">
+                <img src="../../../assets/Images/profile.png" alt="" />
+                <p class="mb-0">Robert</p>
+              </div>
+              <a href="">See profile</a>
+            </div>
+          </li>
+          <li>
+            <div class="spcBetween">
+              <div class="profile">
+                <img src="../../../assets/Images/profile.png" alt="" />
+                <p class="mb-0">Robert</p>
+              </div>
+              <a href="">See profile</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Payment -->
+<div
+  class="modal fade"
+  id="editPayment"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered w-661">
+    <div class="modal-content">
+      <div class="modal-body p-3 p-sm-5">
+        <div class="close" data-bs-dismiss="modal">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h3 class="fmd fw-500">Enter the Title of Popup</h3>
+          </div>
+          <form class="form">
+            <div class="row">
+              <div class="col-12">
+                <div class="inputField">
+                  <label for="cardNumber" class="fxxsm fw-500"
+                    >Card Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter card number"
+                    id="cardNumber"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="inputField">
+                  <label for="viewAvailable" class="fxxsm fw-500"
+                    >Expiration Date</label
+                  >
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="selectField">
+                        <select name="" id="viewAvailable" class="form-control">
+                          <option disabled selected>Month</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                        </select>
+                        <i class="fa-solid fa-sort-down"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="selectField">
+                        <select name="" id="viewAvailable" class="form-control">
+                          <option disabled selected>Year</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                        </select>
+                        <i class="fa-solid fa-sort-down"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="CVV"
+                        id="cvv"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-0">
+            <button class="btn btn-gradient large w-100">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

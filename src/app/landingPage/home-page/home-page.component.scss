@@ -1,0 +1,296 @@
+@import "/src/styles.scss";
+
+
+// Banner section
+
+section.banner {
+  background-color: $secondary;
+
+  .contant {
+    color: $light;
+
+    h1 {
+      line-height: 75px;
+
+      span.bg-dark-8 {
+        padding: 5px;
+        background-color: $light;
+        color: $primary;
+      }
+    }
+  }
+}
+
+// About Us section
+section.aboutUs {
+  .content {
+    p {
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .whyChoose {
+      background-color: $secondary;
+      padding: 12px;
+      border-radius: 10px;
+      height: 100%;
+      color: $light;
+    }
+  }
+}
+
+// Tutor Section
+
+section.tutor {
+  .content {
+    background-image: url("../../../assets/Images/bg_img.png");
+    background-position: center;
+    background-size: cover;
+    background-color: $light;
+    padding: 15px;
+    border-radius: 20px;
+    height: 100%;
+
+    .img {
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+
+    .name {
+      font-size: 25px;
+      font-weight: 700;
+      color: $primary;
+    }
+
+    .about {
+      font-size: 16px;
+      color: rgba($color: $dark, $alpha: 0.8);
+    }
+
+    &:hover {
+      background-color: $secondary;
+
+      .name {
+        color: $light;
+      }
+
+      .about {
+        color: $light;
+      }
+    }
+  }
+}
+
+// Pricing section
+
+section.pricing {
+  background-color: $light;
+
+  .content {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba($color: $dark, $alpha: 0.1);
+
+    h4 {
+      font-size: 30px;
+      color: $primary;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 20px;
+      color: $dark;
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: $primary;
+      font-weight: 700;
+
+      span {
+        font-size: 20px;
+        color: $dark;
+        font-weight: 500;
+      }
+    }
+
+    hr {
+      background-color: rgba($color: $dark, $alpha: 0.3);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 20px;
+        margin: 20px 0;
+      }
+    }
+
+    .btn-outline {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg,
+          #f1f9ff 0%,
+          rgba(255, 255, 255, 0) 100%);
+      box-shadow: 0px 19px 32px 0px rgba(0, 0, 0, 0.08);
+
+      .btn-outline {
+        border: 1px solid $primary;
+        color: $light;
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+
+
+// section contact
+
+section.contact {
+  .contactDetails {
+    background-image: url("/assets/bg_img_Contact.png");
+    background-position: center;
+    background-size: cover;
+    background-color: $primary;
+    color: $light;
+    padding: 50px 20px;
+    border-radius: 10px;
+    height: 100%;
+
+    .contactList {
+      @include itemPosition(center, flex-start);
+      gap: 15px;
+      margin-bottom: 30px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .contactForm {
+    border: 1px solid rgba($color: $dark, $alpha: 0.2);
+    padding: 25px;
+    border-radius: 10px;
+
+    form {
+
+      input,
+      textarea {
+        border: none;
+        border-bottom: 1px solid rgba($color: $dark, $alpha: 0.2);
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        border-radius: 0;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  p.heading {
+    font-size: 16px;
+  }
+
+  h1.main {
+    font-size: 40px;
+  }
+
+  h1.secondary {
+    font-size: 30px;
+  }
+
+  h2.secondary {
+    font-size: 25px;
+  }
+
+  // buttons
+  .btn {
+    height: 45px;
+    padding: 0 40px;
+    font-size: 16px;
+  }
+
+  // Header Section
+
+  header {
+    nav {
+      ul.navbar-nav {
+        gap: 20px;
+
+        li.nav-item {
+          a.nav-link {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // Pricing section
+
+  section.pricing {
+    .content {
+      h4 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 40px;
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+      ul {
+        li {
+          font-size: 16px;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  header {
+    nav {
+      ul.navbar-nav {
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    nav {
+      a.navbar-brand {
+        img {
+          width: 120px;
+        }
+      }
+    }
+  }
+}

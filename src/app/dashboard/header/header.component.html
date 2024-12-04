@@ -1,0 +1,41 @@
+<div class="header shadow">
+  <div class="spcBetween h-100">
+    <div class="pageTitle">
+      <i class="fa-solid fa-bars fxl d-block d-lg-none" (click)="trigermenu()"></i>
+      <h1 class="fmd mb-0 c-main fw-600">Dashboard</h1>
+    </div>
+    <div class="userProfile">
+      <div class="notification">
+        <i class="fa-solid fa-bell" (click)="notification = !notification"></i>
+        <span></span>
+        <div class="card" *ngIf="notification">
+          <div class="card-header">Notifications</div>
+          <div class="card-body">
+            <ul>
+              <li>This is a notifiaction for your profile update.</li>
+              <li>Someone send you message</li>
+              <li>This is a notifiaction for your profile update.</li>
+              <li>Someone send you message</li>
+              <li>This is a notifiaction for your profile update.</li>
+              <li>Someone send you message</li>
+              <li>This is a notifiaction for your profile update.</li>
+              <li>Someone send you message</li>
+              <li>This is a notifiaction for your profile update.</li>
+              <li>Someone send you message</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-main medium" (click)="notification = false">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="profileImage">
+        <img src="../../../assets/Images/profile.png" alt="" />
+      </div>
+      <p-menubar [model]="items"> </p-menubar>
+    </div>
+  </div>
+</div>

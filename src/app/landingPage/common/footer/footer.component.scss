@@ -1,0 +1,63 @@
+@import "/src/styles.scss";
+// footer
+
+footer {
+  background-color: $light;
+  border-top: 4px solid $primary;
+
+  img.logo {
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: rgba($color: $dark, $alpha: 0.54);
+  }
+
+  h4 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      @include itemPosition(center, flex-start);
+      gap: 15px;
+      margin-bottom: 20px;
+      color: rgba($color: $dark, $alpha: 0.54);
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .socialProfile {
+    @include itemPosition(center, flex-start);
+    gap: 25px;
+
+    a {
+      text-decoration: none;
+
+      i {
+        width: 40px;
+        height: 40px;
+        border-radius: 10%;
+        color: $primary;
+        @include itemPosition(center, center);
+        font-size: 20px;
+        cursor: pointer;
+        transition: all ease-out 0.2s;
+
+        &:hover {
+          background-color: $primary;
+          color: $light;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

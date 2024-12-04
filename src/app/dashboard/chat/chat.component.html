@@ -1,0 +1,149 @@
+<div class="row">
+  <div class="col-12">
+    <div class="shadowBox p-0">
+      <div class="chatBox">
+        <!-- chat List  -->
+        <div class="chatlist" [class.toggleChat]="toggleChat">
+          <div class="chatTitle">
+            <h2 class="flg">Inbox</h2>
+          </div>
+          <div class="chatContact active" (click)="toggleChat = false">
+            <div class="spcBetween">
+              <div class="flexStart flex-1">
+                <div class="profileBox small">
+                  <img src="../../../../../assets/img/profile.png" alt="" />
+                  <i class="fa-solid fa-circle c-green"></i>
+                </div>
+                <div class="text">
+                  <h4 class="mb-0 fxxsm">Katie W</h4>
+                  <p class="mb-0 fxs">Hello! How can I help?</p>
+                </div>
+              </div>
+              <div class="messageCount">1</div>
+            </div>
+          </div>
+          <div class="chatContact" (click)="toggleChat = false">
+            <div class="spcBetween">
+              <div class="flexStart flex-1">
+                <div class="profileBox small">
+                  <img src="../../../../../assets/img/profile.png" alt="" />
+                  <i class="fa-solid fa-circle c-lightGrey"></i>
+                </div>
+                <div class="text">
+                  <h4 class="mb-0 fxxsm">Katie W</h4>
+                  <p class="mb-0 fxs">Hello! How can I help?</p>
+                </div>
+              </div>
+              <div class="messageCount">1</div>
+            </div>
+          </div>
+          <div class="chatContact" (click)="toggleChat = false">
+            <div class="spcBetween">
+              <div class="flexStart flex-1">
+                <div class="profileBox small">
+                  <img src="../../../../../assets/img/profile.png" alt="" />
+                  <i class="fa-solid fa-circle c-lightGrey"></i>
+                </div>
+                <div class="text">
+                  <h4 class="mb-0 fxxsm">Katie W</h4>
+                  <p class="mb-0 fxs">Hello! How can I help?</p>
+                </div>
+              </div>
+              <div class="messageCount">1</div>
+            </div>
+          </div>
+        </div>
+        <!-- converstion Box  -->
+        <div class="converstionBox">
+          <div class="realChat">
+            <div class="conversationHeader">
+              <div class="spcBetween h-100">
+                <div class="flexStart">
+                  <div class="toggleIcon" (click)="toggleChat = !toggleChat">
+                    <i class="fa-brands fa-rocketchat"></i>
+                  </div>
+                  <div class="profileBox medium">
+                    <img src="../../../../../assets/img/profile.png" alt="" />
+                  </div>
+                  <div class="text">
+                    <h4 class="mb-0 fxsm">Katie W</h4>
+                    <p class="mb-0 c-text_2 fxs">Online</p>
+                  </div>
+                </div>
+                <div class="callBox">
+                  <div class="calloption">
+                    <i class="fa-solid fa-video"></i>
+                  </div>
+                  <div class="calloption">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="conversation">
+              <div class="sendedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="receivedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="sendedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="receivedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="sendedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="receivedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="sendedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="receivedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="sendedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="receivedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="sendedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+              <div class="receivedMessage">
+                <p class="mb-0 fxs">10:00 PM</p>
+                <div class="textMessage">Sure! I will send it to you.</div>
+              </div>
+            </div>
+            <div class="chatFooter">
+              <div class="typeBox">
+                <input type="text" class="form-control" placeholder="Write a message..." />
+                <div class="pin">
+                  <i class="fa-solid fa-paperclip"></i>
+                </div>
+                <div class="send">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

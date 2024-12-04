@@ -1,0 +1,17 @@
+<div class="pagNav">
+  Dashboard
+  <i class="fa-solid fa-chevron-right"></i>
+  <span>Calendar</span>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 px-0">
+      <full-calendar [options]="calendarOptions">
+        <ng-template #eventContent let-arg>
+          <b>{{ arg.timeText }}</b>
+          <i>{{ arg.event.title }}</i>
+        </ng-template>
+      </full-calendar>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-12">
+    <div class="tabularData">
+      <h3 class="c-main fxsm2 fw-600">Past Appointments</h3>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="c-text fw-400 fxxsm">Appointment Type</th>
+              <th scope="col" class="c-text fw-400 fxxsm">Date</th>
+              <th scope="col" class="c-text fw-400 fxxsm">Time</th>
+              <th scope="col" class="c-text fw-400 fxxsm text-center">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Online</td>
+              <td>01/07/2023</td>
+              <td>10:00 AM</td>
+              <td>
+                <div class="actionBox">
+                  <div
+                    class="icon sky"
+                    data-bs-toggle="modal"
+                    data-bs-target="#assessmentDetail"
+                  >
+                    <img src="../../../assets/Images/icon/eye.svg" alt="" />
+                  </div>
+                  <div class="icon primary" (click)="showDialog()">
+                    <i class="fa-solid fa-trash-can text-light"></i>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Online</td>
+              <td>01/07/2023</td>
+              <td>10:00 AM</td>
+              <td>
+                <div class="actionBox">
+                  <div
+                    class="icon sky"
+                    data-bs-toggle="modal"
+                    data-bs-target="#assessmentDetail"
+                  >
+                    <img src="../../../assets/Images/icon/eye.svg" alt="" />
+                  </div>
+                  <div class="icon primary" (click)="showDialog()">
+                    <i class="fa-solid fa-trash-can text-light"></i>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Online</td>
+              <td>01/07/2023</td>
+              <td>10:00 AM</td>
+              <td>
+                <div class="actionBox">
+                  <div
+                    class="icon sky"
+                    data-bs-toggle="modal"
+                    data-bs-target="#assessmentDetail"
+                  >
+                    <img src="../../../assets/Images/icon/eye.svg" alt="" />
+                  </div>
+                  <div class="icon primary" (click)="showDialog()">
+                    <i class="fa-solid fa-trash-can text-light"></i>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Confirmation -->
+
+<div class="card flex justify-content-center">
+  <p-dialog
+    [(visible)]="visible"
+    [modal]="true"
+    [style]="{ maxWidth: '500px', margin: '15px' }"
+    [draggable]="false"
+    [resizable]="false"
+  >
+    <div class="row">
+      <div class="col-12 mb-4 text-center fw-600 fsm">
+        Are you sure you want to delete the item?
+      </div>
+      <div class="col-12 text-center">
+        <button class="btn btn-gradient me-3">Yes</button>
+        <button class="btn btn-outline" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </p-dialog>
+</div>

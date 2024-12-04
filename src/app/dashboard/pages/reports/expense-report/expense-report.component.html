@@ -1,0 +1,71 @@
+<div class="pagNav">
+  Reports
+  <i class="fa-solid fa-chevron-right"></i>
+  <span>Expense Report</span>
+</div>
+<div class="row align-items-end">
+  <div class="col-lg-3 col-sm-6">
+    <label for="">Select City</label>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true"
+      placeholder="Select a City"></p-dropdown>
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    <label for="" class="d-block">From</label>
+
+    <p-calendar [(ngModel)]="date" [showIcon]="true"></p-calendar>
+
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    <label for="" class="d-block">To</label>
+
+    <p-calendar [(ngModel)]="date" [showIcon]="true"></p-calendar>
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    <button class="btn btn-main medium">Search</button>
+  </div>
+</div>
+<div class="row my-4">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header fw-600 flexStart">
+        <h4 class="mb-0">Expense Report</h4>
+
+        <div class="search">
+          <input type="text" name="" id="" placeholder="search" class="form-control" />
+          <button class="btn-search halfborder">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="btn-search">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-body px-0 pt-0">
+        <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Status</th>
+              <th>Reviews</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-product let-columns="columns">
+            <tr>
+              <td>{{ product.name }}</td>
+              <td>{{ product.price | currency : "USD" }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.quantity }}</td>
+              <td>Succes</td>
+              <td>
+                <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>

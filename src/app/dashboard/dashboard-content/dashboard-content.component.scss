@@ -1,0 +1,65 @@
+@import "/src/styles.scss";
+.overview {
+  .card {
+    border: none;
+    color: $light;
+    .icon {
+      font-size: 20px;
+      margin-bottom: 12px;
+      i {
+        color: $primary;
+      }
+      &.cbg-red {
+        @include roundShape(50px, 50px, $light);
+      }
+      &.cbg-green {
+        @include roundShape(50px, 50px, $light);
+      }
+      &.cbg-purple {
+        @include roundShape(50px, 50px, $light);
+      }
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: $light;
+    }
+    &.bg-red {
+      background: rgb(239,105,144);
+background: linear-gradient(90deg, rgba(239,105,144,1) 0%, rgba(253,158,177,0.644782913165266) 100%);
+    }
+    &.bg-green {
+      background: rgb(167,125,238);
+background: linear-gradient(90deg, rgba(167,125,238,1) 0%, rgba(201,165,251,1) 100%);
+    }
+    &.bg-purple {
+      background: rgb(54,194,159);
+background: linear-gradient(90deg, rgba(54,194,159,1) 0%, rgba(146,240,174,1) 100%);
+    }
+  }
+}
+.performingproducts {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+.userList {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-bottom: 15px;
+      .profile {
+        @include itemPosition(center, flex-start);
+        gap: 10px;
+        img {
+          @include roundShape(40px, 40px, transparent);
+        }
+      }
+    }
+  }
+}

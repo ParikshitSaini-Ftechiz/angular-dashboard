@@ -1,0 +1,19 @@
+@mixin itemPosition($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin roundShape($width, $height, $bgColor) {
+  @include itemPosition(center, center);
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background-color: $bgColor;
+}
+@mixin squareShape($width, $height, $bgColor, $radius) {
+  @include itemPosition(center, center);
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: $bgColor;
+}
